@@ -23,7 +23,7 @@ Partial Class cheque
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         lblcheck = New Label()
-        Me.PoisonDateTimeCheque = New TextBox()
+        Me.PoisonDateTimeCheque = New ReaLTaiizor.Controls.PoisonDateTime()
         PoisonDateTimeCheque = New ReaLTaiizor.Controls.PoisonDateTime()
         Label1 = New Label()
         Label2 = New Label()
