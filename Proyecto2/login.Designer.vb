@@ -107,8 +107,11 @@ Partial Class login
 
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtusuario As TextBox
+    Friend WithEvents txtcontraseña As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents btniniciarsesion As Button
+    Friend WithEvents btnsalir As Button
+
 End Class
