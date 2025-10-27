@@ -1,3 +1,3 @@
-﻿Public Class cheque
+﻿Public Class btnregistrar
 
 End Class

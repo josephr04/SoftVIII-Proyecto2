@@ -51,7 +51,7 @@ Partial Class Form1
         FlowLayoutPanel1.Location = New Point(0, 0)
         FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         FlowLayoutPanel1.Padding = New Padding(0, 100, 0, 0)
-        FlowLayoutPanel1.Size = New Size(250, 617)
+        FlowLayoutPanel1.Size = New Size(235, 784)
         FlowLayoutPanel1.TabIndex = 0
         ' 
         ' Panel4
@@ -74,7 +74,7 @@ Partial Class Form1
         Button4.Location = New Point(-14, -12)
         Button4.Name = "Button4"
         Button4.Padding = New Padding(25, 0, 0, 0)
-        Button4.Size = New Size(274, 80)
+        Button4.Size = New Size(249, 80)
         Button4.TabIndex = 1
         Button4.Text = "                      Cheques"
         Button4.TextAlign = ContentAlignment.MiddleLeft
@@ -100,7 +100,7 @@ Partial Class Form1
         Button5.Location = New Point(-6, -12)
         Button5.Name = "Button5"
         Button5.Padding = New Padding(25, 0, 0, 0)
-        Button5.Size = New Size(266, 80)
+        Button5.Size = New Size(241, 80)
         Button5.TabIndex = 1
         Button5.Text = "                    Depósitos"
         Button5.TextAlign = ContentAlignment.MiddleLeft
@@ -126,9 +126,9 @@ Partial Class Form1
         Button1.Location = New Point(-14, -12)
         Button1.Name = "Button1"
         Button1.Padding = New Padding(25, 0, 0, 0)
-        Button1.Size = New Size(274, 80)
+        Button1.Size = New Size(249, 80)
         Button1.TabIndex = 1
-        Button1.Text = "               Conciliación Bancaria"
+        Button1.Text = "             Conciliación Bancaria"
         Button1.TextAlign = ContentAlignment.MiddleLeft
         Button1.UseVisualStyleBackColor = False
         ' 
@@ -152,7 +152,7 @@ Partial Class Form1
         Button2.Location = New Point(-14, -12)
         Button2.Name = "Button2"
         Button2.Padding = New Padding(25, 0, 0, 0)
-        Button2.Size = New Size(271, 80)
+        Button2.Size = New Size(249, 80)
         Button2.TabIndex = 1
         Button2.Text = "                      Logout"
         Button2.TextAlign = ContentAlignment.MiddleLeft
@@ -161,16 +161,16 @@ Partial Class Form1
         ' ParrotWidgetPanel1
         ' 
         ParrotWidgetPanel1.ControlsAsWidgets = False
-        ParrotWidgetPanel1.Location = New Point(256, 0)
+        ParrotWidgetPanel1.Location = New Point(234, 0)
         ParrotWidgetPanel1.Name = "ParrotWidgetPanel1"
-        ParrotWidgetPanel1.Size = New Size(1036, 617)
+        ParrotWidgetPanel1.Size = New Size(1096, 784)
         ParrotWidgetPanel1.TabIndex = 1
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1293, 617)
+        ClientSize = New Size(1328, 784)
         Controls.Add(ParrotWidgetPanel1)
         Controls.Add(FlowLayoutPanel1)
         Name = "Form1"

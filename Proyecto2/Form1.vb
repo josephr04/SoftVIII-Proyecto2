@@ -29,7 +29,7 @@
 
     ' --- Botones ---
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        childform(New cheque)
+        childform(New btnregistrar)
         HighlightButton(Button4)
     End Sub
 
@@ -43,4 +43,7 @@
         HighlightButton(Button1)
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+    End Sub
 End Class
