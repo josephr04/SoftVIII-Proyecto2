@@ -53,7 +53,7 @@ Partial Class btnregistrar
         ' lblcheck
         ' 
         lblcheck.AutoSize = True
-        lblcheck.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        lblcheck.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
         lblcheck.Location = New Point(265, 384)
         lblcheck.Name = "lblcheck"
         lblcheck.Size = New Size(185, 25)
@@ -73,7 +73,7 @@ Partial Class btnregistrar
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        Label1.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
         Label1.Location = New Point(551, 384)
         Label1.Name = "Label1"
         Label1.Size = New Size(161, 25)
@@ -83,7 +83,7 @@ Partial Class btnregistrar
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        Label2.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
         Label2.Location = New Point(654, 594)
         Label2.Name = "Label2"
         Label2.Size = New Size(106, 25)
@@ -115,7 +115,7 @@ Partial Class btnregistrar
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        Label3.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
         Label3.Location = New Point(311, 461)
         Label3.Name = "Label3"
         Label3.Size = New Size(78, 25)
@@ -125,7 +125,7 @@ Partial Class btnregistrar
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        Label4.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
         Label4.Location = New Point(311, 579)
         Label4.Name = "Label4"
         Label4.Size = New Size(73, 25)
@@ -159,7 +159,7 @@ Partial Class btnregistrar
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        Label5.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
         Label5.Location = New Point(636, 485)
         Label5.Name = "Label5"
         Label5.Size = New Size(155, 25)
@@ -179,14 +179,14 @@ Partial Class btnregistrar
         ' 
         ' DataGridView1
         ' 
-        DataGridViewCellStyle3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle3.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         DataGridViewCellStyle3.ForeColor = Color.Black
         DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         DataGridView1.BackgroundColor = Color.Teal
         DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Raised
         DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = SystemColors.Control
-        DataGridViewCellStyle4.Font = New Font("Segoe UI", 11F)
+        DataGridViewCellStyle4.Font = New Font("Segoe UI", 11.0F)
         DataGridViewCellStyle4.ForeColor = Color.Black
         DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
@@ -257,7 +257,7 @@ Partial Class btnregistrar
         btniniciarsesion.Cursor = Cursors.Hand
         btniniciarsesion.FlatAppearance.BorderSize = 0
         btniniciarsesion.FlatStyle = FlatStyle.Flat
-        btniniciarsesion.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        btniniciarsesion.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
         btniniciarsesion.ForeColor = Color.White
         btniniciarsesion.Location = New Point(808, 407)
         btniniciarsesion.Name = "btniniciarsesion"
@@ -270,7 +270,7 @@ Partial Class btnregistrar
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI", 14F, FontStyle.Bold)
+        Label6.Font = New Font("Segoe UI", 14.0F, FontStyle.Bold)
         Label6.Location = New Point(486, 28)
         Label6.Name = "Label6"
         Label6.Size = New Size(204, 32)
@@ -289,7 +289,7 @@ Partial Class btnregistrar
         ' 
         ' btnregistrar
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1183, 805)
