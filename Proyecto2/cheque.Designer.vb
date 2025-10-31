@@ -29,32 +29,39 @@ Partial Class btnregistrar
         Label1 = New Label()
         Label2 = New Label()
         cboproveedor = New ReaLTaiizor.Controls.AloneComboBox()
-        TextBox2 = New TextBox()
         Label3 = New Label()
         Label4 = New Label()
-        TextBox4 = New TextBox()
         cbogasto = New ReaLTaiizor.Controls.AloneComboBox()
         Label5 = New Label()
-        txtnumerochk = New TextBox()
-        DataGridView1 = New DataGridView()
+        DataGridViewChk = New DataGridView()
         numerochk = New DataGridViewTextBoxColumn()
         fechachk = New DataGridViewTextBoxColumn()
         proveedor = New DataGridViewTextBoxColumn()
-        monto = New DataGridViewTextBoxColumn()
+        montonum = New DataGridViewTextBoxColumn()
+        montoltr = New DataGridViewTextBoxColumn()
         detalle = New DataGridViewTextBoxColumn()
         objgasto = New DataGridViewTextBoxColumn()
         acciones = New DataGridViewTextBoxColumn()
-        btniniciarsesion = New Button()
+        btncancelarchk = New Button()
         Label6 = New Label()
         Label7 = New Label()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        Label8 = New Label()
+        Panel1 = New Panel()
+        btnregistrarchk = New Button()
+        txtmontoltr = New ReaLTaiizor.Controls.AloneTextBox()
+        txtmontonum = New ReaLTaiizor.Controls.AloneTextBox()
+        txtnumerochk = New ReaLTaiizor.Controls.AloneTextBox()
+        txtdetallechk = New TextBox()
+        CType(DataGridViewChk, ComponentModel.ISupportInitialize).BeginInit()
+        Panel1.SuspendLayout()
         SuspendLayout()
         ' 
         ' lblcheck
         ' 
         lblcheck.AutoSize = True
-        lblcheck.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
-        lblcheck.Location = New Point(265, 384)
+        lblcheck.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        lblcheck.ForeColor = SystemColors.ControlText
+        lblcheck.Location = New Point(13, 54)
         lblcheck.Name = "lblcheck"
         lblcheck.Size = New Size(185, 25)
         lblcheck.TabIndex = 0
@@ -64,17 +71,18 @@ Partial Class btnregistrar
         ' 
         PoisonDateTimeCheque.CalendarFont = New Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         PoisonDateTimeCheque.FontSize = ReaLTaiizor.Extension.Poison.PoisonDateTimeSize.Medium
-        PoisonDateTimeCheque.Location = New Point(511, 412)
+        PoisonDateTimeCheque.Location = New Point(318, 82)
         PoisonDateTimeCheque.MinimumSize = New Size(0, 30)
         PoisonDateTimeCheque.Name = "PoisonDateTimeCheque"
-        PoisonDateTimeCheque.Size = New Size(245, 30)
+        PoisonDateTimeCheque.Size = New Size(218, 30)
         PoisonDateTimeCheque.TabIndex = 2
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
-        Label1.Location = New Point(551, 384)
+        Label1.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        Label1.ForeColor = SystemColors.ControlText
+        Label1.Location = New Point(318, 54)
         Label1.Name = "Label1"
         Label1.Size = New Size(161, 25)
         Label1.TabIndex = 3
@@ -83,8 +91,9 @@ Partial Class btnregistrar
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
-        Label2.Location = New Point(654, 594)
+        Label2.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        Label2.ForeColor = SystemColors.ControlText
+        Label2.Location = New Point(318, 216)
         Label2.Name = "Label2"
         Label2.Size = New Size(106, 25)
         Label2.TabIndex = 4
@@ -97,51 +106,32 @@ Partial Class btnregistrar
         cboproveedor.EnabledCalc = True
         cboproveedor.FormattingEnabled = True
         cboproveedor.ItemHeight = 20
-        cboproveedor.Location = New Point(596, 622)
+        cboproveedor.Location = New Point(318, 256)
         cboproveedor.Name = "cboproveedor"
-        cboproveedor.Size = New Size(245, 26)
+        cboproveedor.Size = New Size(288, 26)
         cboproveedor.TabIndex = 8
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.BackColor = Color.FromArgb(CByte(179), CByte(196), CByte(214))
-        TextBox2.BorderStyle = BorderStyle.None
-        TextBox2.Location = New Point(259, 489)
-        TextBox2.Multiline = True
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(181, 30)
-        TextBox2.TabIndex = 9
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
-        Label3.Location = New Point(311, 461)
+        Label3.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        Label3.ForeColor = SystemColors.ControlText
+        Label3.Location = New Point(13, 131)
         Label3.Name = "Label3"
-        Label3.Size = New Size(78, 25)
+        Label3.Size = New Size(163, 25)
         Label3.TabIndex = 10
-        Label3.Text = "Monto "
+        Label3.Text = "Monto numérico"
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
-        Label4.Location = New Point(311, 579)
+        Label4.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        Label4.ForeColor = SystemColors.ControlText
+        Label4.Location = New Point(13, 307)
         Label4.Name = "Label4"
         Label4.Size = New Size(73, 25)
         Label4.TabIndex = 12
         Label4.Text = "Detalle"
-        ' 
-        ' TextBox4
-        ' 
-        TextBox4.BackColor = Color.FromArgb(CByte(179), CByte(196), CByte(214))
-        TextBox4.BorderStyle = BorderStyle.None
-        TextBox4.Location = New Point(246, 607)
-        TextBox4.Multiline = True
-        TextBox4.Name = "TextBox4"
-        TextBox4.PlaceholderText = "Ingrese el detalle del cheque..."
-        TextBox4.Size = New Size(211, 66)
-        TextBox4.TabIndex = 13
         ' 
         ' cbogasto
         ' 
@@ -151,55 +141,45 @@ Partial Class btnregistrar
         cbogasto.EnabledCalc = True
         cbogasto.FormattingEnabled = True
         cbogasto.ItemHeight = 20
-        cbogasto.Location = New Point(596, 517)
+        cbogasto.Location = New Point(13, 256)
         cbogasto.Name = "cbogasto"
-        cbogasto.Size = New Size(245, 26)
+        cbogasto.Size = New Size(273, 26)
         cbogasto.TabIndex = 14
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
-        Label5.Location = New Point(636, 485)
+        Label5.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        Label5.ForeColor = SystemColors.ControlText
+        Label5.Location = New Point(13, 216)
         Label5.Name = "Label5"
         Label5.Size = New Size(155, 25)
         Label5.TabIndex = 15
         Label5.Text = "Objeto de Gasto"
         ' 
-        ' txtnumerochk
+        ' DataGridViewChk
         ' 
-        txtnumerochk.BackColor = Color.FromArgb(CByte(179), CByte(196), CByte(214))
-        txtnumerochk.BorderStyle = BorderStyle.None
-        txtnumerochk.Location = New Point(265, 412)
-        txtnumerochk.Multiline = True
-        txtnumerochk.Name = "txtnumerochk"
-        txtnumerochk.ReadOnly = True
-        txtnumerochk.Size = New Size(181, 30)
-        txtnumerochk.TabIndex = 16
-        ' 
-        ' DataGridView1
-        ' 
-        DataGridViewCellStyle3.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         DataGridViewCellStyle3.ForeColor = Color.Black
-        DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
-        DataGridView1.BackgroundColor = Color.Teal
-        DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Raised
+        DataGridViewChk.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewChk.BackgroundColor = Color.Teal
+        DataGridViewChk.CellBorderStyle = DataGridViewCellBorderStyle.Raised
         DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = SystemColors.Control
-        DataGridViewCellStyle4.Font = New Font("Segoe UI", 11.0F)
+        DataGridViewCellStyle4.Font = New Font("Segoe UI", 11F)
         DataGridViewCellStyle4.ForeColor = Color.Black
         DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
-        DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {numerochk, fechachk, proveedor, monto, detalle, objgasto, acciones})
-        DataGridView1.GridColor = Color.FromArgb(CByte(195), CByte(157), CByte(230))
-        DataGridView1.Location = New Point(156, 74)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.RowHeadersWidth = 51
-        DataGridView1.Size = New Size(874, 245)
-        DataGridView1.TabIndex = 17
+        DataGridViewChk.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewChk.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewChk.Columns.AddRange(New DataGridViewColumn() {numerochk, fechachk, proveedor, montonum, montoltr, detalle, objgasto, acciones})
+        DataGridViewChk.GridColor = Color.FromArgb(CByte(195), CByte(157), CByte(230))
+        DataGridViewChk.Location = New Point(41, 61)
+        DataGridViewChk.Name = "DataGridViewChk"
+        DataGridViewChk.RowHeadersWidth = 51
+        DataGridViewChk.Size = New Size(1019, 245)
+        DataGridViewChk.TabIndex = 17
         ' 
         ' numerochk
         ' 
@@ -223,12 +203,19 @@ Partial Class btnregistrar
         proveedor.Name = "proveedor"
         proveedor.Width = 125
         ' 
-        ' monto
+        ' montonum
         ' 
-        monto.HeaderText = "Monto"
-        monto.MinimumWidth = 6
-        monto.Name = "monto"
-        monto.Width = 90
+        montonum.HeaderText = "Monto Numérico"
+        montonum.MinimumWidth = 6
+        montonum.Name = "montonum"
+        montonum.Width = 125
+        ' 
+        ' montoltr
+        ' 
+        montoltr.HeaderText = "Monto en Letras"
+        montoltr.MinimumWidth = 6
+        montoltr.Name = "montoltr"
+        montoltr.Width = 125
         ' 
         ' detalle
         ' 
@@ -251,27 +238,26 @@ Partial Class btnregistrar
         acciones.Name = "acciones"
         acciones.Width = 90
         ' 
-        ' btniniciarsesion
+        ' btncancelarchk
         ' 
-        btniniciarsesion.BackColor = Color.FromArgb(CByte(15), CByte(131), CByte(229))
-        btniniciarsesion.Cursor = Cursors.Hand
-        btniniciarsesion.FlatAppearance.BorderSize = 0
-        btniniciarsesion.FlatStyle = FlatStyle.Flat
-        btniniciarsesion.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
-        btniniciarsesion.ForeColor = Color.White
-        btniniciarsesion.Location = New Point(808, 407)
-        btniniciarsesion.Name = "btniniciarsesion"
-        btniniciarsesion.Size = New Size(138, 39)
-        btniniciarsesion.TabIndex = 18
-        btniniciarsesion.Text = "   Registrar"
-        btniniciarsesion.TextAlign = ContentAlignment.MiddleLeft
-        btniniciarsesion.UseVisualStyleBackColor = False
+        btncancelarchk.BackColor = SystemColors.ButtonFace
+        btncancelarchk.Cursor = Cursors.Hand
+        btncancelarchk.FlatAppearance.BorderSize = 0
+        btncancelarchk.FlatStyle = FlatStyle.Flat
+        btncancelarchk.Font = New Font("Segoe UI", 12F)
+        btncancelarchk.ForeColor = SystemColors.ControlText
+        btncancelarchk.Location = New Point(560, 361)
+        btncancelarchk.Name = "btncancelarchk"
+        btncancelarchk.Size = New Size(138, 39)
+        btncancelarchk.TabIndex = 18
+        btncancelarchk.Text = "Cancelar"
+        btncancelarchk.UseVisualStyleBackColor = False
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI", 14.0F, FontStyle.Bold)
-        Label6.Location = New Point(486, 28)
+        Label6.Font = New Font("Segoe UI", 14F, FontStyle.Bold)
+        Label6.Location = New Point(426, 15)
         Label6.Name = "Label6"
         Label6.Size = New Size(204, 32)
         Label6.TabIndex = 19
@@ -281,37 +267,136 @@ Partial Class btnregistrar
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(429, 342)
+        Label7.ForeColor = SystemColors.ControlText
+        Label7.Location = New Point(13, 9)
         Label7.Name = "Label7"
         Label7.Size = New Size(231, 31)
         Label7.TabIndex = 20
         Label7.Text = "Registro de Cheques"
         ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        Label8.ForeColor = SystemColors.ControlText
+        Label8.Location = New Point(318, 131)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(153, 25)
+        Label8.TabIndex = 22
+        Label8.Text = "Monto en letras"
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BorderStyle = BorderStyle.FixedSingle
+        Panel1.Controls.Add(btnregistrarchk)
+        Panel1.Controls.Add(btncancelarchk)
+        Panel1.Controls.Add(txtmontoltr)
+        Panel1.Controls.Add(Label8)
+        Panel1.Controls.Add(txtmontonum)
+        Panel1.Controls.Add(Label5)
+        Panel1.Controls.Add(Label4)
+        Panel1.Controls.Add(cboproveedor)
+        Panel1.Controls.Add(cbogasto)
+        Panel1.Controls.Add(Label2)
+        Panel1.Controls.Add(txtnumerochk)
+        Panel1.Controls.Add(Label7)
+        Panel1.Controls.Add(lblcheck)
+        Panel1.Controls.Add(Label3)
+        Panel1.Controls.Add(PoisonDateTimeCheque)
+        Panel1.Controls.Add(Label1)
+        Panel1.Controls.Add(txtdetallechk)
+        Panel1.ForeColor = SystemColors.ControlText
+        Panel1.Location = New Point(111, 328)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(871, 433)
+        Panel1.TabIndex = 23
+        ' 
+        ' btnregistrarchk
+        ' 
+        btnregistrarchk.BackColor = Color.FromArgb(CByte(15), CByte(131), CByte(229))
+        btnregistrarchk.Cursor = Cursors.Hand
+        btnregistrarchk.FlatAppearance.BorderSize = 0
+        btnregistrarchk.FlatStyle = FlatStyle.Flat
+        btnregistrarchk.Font = New Font("Segoe UI", 12F)
+        btnregistrarchk.ForeColor = Color.White
+        btnregistrarchk.Location = New Point(718, 361)
+        btnregistrarchk.Name = "btnregistrarchk"
+        btnregistrarchk.Size = New Size(138, 39)
+        btnregistrarchk.TabIndex = 26
+        btnregistrarchk.Text = "Registrar"
+        btnregistrarchk.UseVisualStyleBackColor = False
+        ' 
+        ' txtmontoltr
+        ' 
+        txtmontoltr.BackColor = Color.Transparent
+        txtmontoltr.EnabledCalc = True
+        txtmontoltr.Font = New Font("Segoe UI", 9F)
+        txtmontoltr.ForeColor = Color.FromArgb(CByte(124), CByte(133), CByte(142))
+        txtmontoltr.Location = New Point(318, 159)
+        txtmontoltr.MaxLength = 32767
+        txtmontoltr.MultiLine = False
+        txtmontoltr.Name = "txtmontoltr"
+        txtmontoltr.ReadOnly = False
+        txtmontoltr.Size = New Size(288, 36)
+        txtmontoltr.TabIndex = 23
+        txtmontoltr.TextAlign = HorizontalAlignment.Left
+        txtmontoltr.UseSystemPasswordChar = False
+        ' 
+        ' txtmontonum
+        ' 
+        txtmontonum.BackColor = Color.Transparent
+        txtmontonum.EnabledCalc = True
+        txtmontonum.Font = New Font("Segoe UI", 9F)
+        txtmontonum.ForeColor = Color.FromArgb(CByte(124), CByte(133), CByte(142))
+        txtmontonum.Location = New Point(13, 159)
+        txtmontonum.MaxLength = 32767
+        txtmontonum.MultiLine = False
+        txtmontonum.Name = "txtmontonum"
+        txtmontonum.ReadOnly = False
+        txtmontonum.Size = New Size(273, 36)
+        txtmontonum.TabIndex = 22
+        txtmontonum.TextAlign = HorizontalAlignment.Left
+        txtmontonum.UseSystemPasswordChar = False
+        ' 
+        ' txtnumerochk
+        ' 
+        txtnumerochk.BackColor = Color.Transparent
+        txtnumerochk.EnabledCalc = True
+        txtnumerochk.Font = New Font("Segoe UI", 9F)
+        txtnumerochk.ForeColor = Color.FromArgb(CByte(124), CByte(133), CByte(142))
+        txtnumerochk.Location = New Point(13, 82)
+        txtnumerochk.MaxLength = 32767
+        txtnumerochk.MultiLine = False
+        txtnumerochk.Name = "txtnumerochk"
+        txtnumerochk.ReadOnly = False
+        txtnumerochk.Size = New Size(218, 36)
+        txtnumerochk.TabIndex = 21
+        txtnumerochk.TextAlign = HorizontalAlignment.Left
+        txtnumerochk.UseSystemPasswordChar = False
+        ' 
+        ' txtdetallechk
+        ' 
+        txtdetallechk.Location = New Point(13, 343)
+        txtdetallechk.Multiline = True
+        txtdetallechk.Name = "txtdetallechk"
+        txtdetallechk.PlaceholderText = "Ingrese el detalle del cheque..."
+        txtdetallechk.Size = New Size(523, 74)
+        txtdetallechk.TabIndex = 27
+        ' 
         ' btnregistrar
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1183, 805)
-        Controls.Add(Label7)
         Controls.Add(Label6)
-        Controls.Add(btniniciarsesion)
-        Controls.Add(DataGridView1)
-        Controls.Add(txtnumerochk)
-        Controls.Add(Label5)
-        Controls.Add(cbogasto)
-        Controls.Add(TextBox4)
-        Controls.Add(Label4)
-        Controls.Add(Label3)
-        Controls.Add(TextBox2)
-        Controls.Add(cboproveedor)
-        Controls.Add(Label2)
-        Controls.Add(Label1)
-        Controls.Add(PoisonDateTimeCheque)
-        Controls.Add(lblcheck)
+        Controls.Add(DataGridViewChk)
+        Controls.Add(Panel1)
         Name = "btnregistrar"
         Text = "cheque"
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(DataGridViewChk, ComponentModel.ISupportInitialize).EndInit()
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -319,29 +404,34 @@ Partial Class btnregistrar
     Friend WithEvents lblcheck As Label
     Public Property TxtBox1 As TextBox
     Public Property Txteditarcheque As TextBox
-    Friend WithEvents txtnumerochk As TextBox
     Friend WithEvents PoisonDateTimeCheque As ReaLTaiizor.Controls.PoisonDateTime
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Private cboproveedor As ReaLTaiizor.Controls.AloneComboBox
     Friend WithEvents AloneComboBox1 As ReaLTaiizor.Controls.AloneComboBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox4 As TextBox
     Friend WithEvents cbogasto As ReaLTaiizor.Controls.AloneComboBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents btniniciarsesion As Button
+    Friend WithEvents DataGridViewChk As DataGridView
+    Friend WithEvents btncancelarchk As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
     Friend WithEvents numerochk As DataGridViewTextBoxColumn
     Friend WithEvents fechachk As DataGridViewTextBoxColumn
     Friend WithEvents proveedor As DataGridViewTextBoxColumn
-    Friend WithEvents monto As DataGridViewTextBoxColumn
+    Friend WithEvents montonum As DataGridViewTextBoxColumn
+    Friend WithEvents montoltr As DataGridViewTextBoxColumn
     Friend WithEvents detalle As DataGridViewTextBoxColumn
     Friend WithEvents objgasto As DataGridViewTextBoxColumn
     Friend WithEvents acciones As DataGridViewTextBoxColumn
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents txtnumerochk As ReaLTaiizor.Controls.AloneTextBox
+    Friend WithEvents txtmontonum As ReaLTaiizor.Controls.AloneTextBox
+    Friend WithEvents txtmontoltr As ReaLTaiizor.Controls.AloneTextBox
+    Friend WithEvents btnregistrarchk As Button
+    Friend WithEvents txtdetallechk As TextBox
 End Class
 
 
