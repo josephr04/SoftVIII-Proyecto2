@@ -73,8 +73,18 @@ Module validaciones
 
         Dim resultado As String = ConvertirEnteroALetras(parteEntera)
 
+        If parteEntera = 1 Then
+            resultado = "un"
+        End If
+
+        If parteEntera > 1 Then
+            resultado &= " balboas"
+        Else
+            resultado &= " balboa"
+        End If
+
         If parteDecimal > 0 Then
-            resultado &= " con " & parteDecimal.ToString() & "/100 centavos"
+            resultado &= " con " & parteDecimal.ToString() & "/100"
         End If
 
         Return resultado
@@ -83,7 +93,7 @@ Module validaciones
     Private Function ConvertirEnteroALetras(numero As Long) As String
         If numero = 0 Then Return "cero"
 
-        Dim unidades() As String = {"", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"}
+        Dim unidades() As String = {"", "un", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"}
         Dim especiales() As String = {"diez", "once", "doce", "trece", "catorce", "quince", "dieciséis", "diecisiete", "dieciocho", "diecinueve"}
         Dim decenas() As String = {"", "", "veinte", "treinta", "cuarenta", "cincuenta", "sesenta", "setenta", "ochenta", "noventa"}
         Dim centenas() As String = {"", "ciento", "doscientos", "trescientos", "cuatrocientos", "quinientos", "seiscientos", "setecientos", "ochocientos", "novecientos"}
