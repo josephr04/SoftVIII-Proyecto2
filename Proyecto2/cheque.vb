@@ -103,6 +103,16 @@ Public Class btnregistrar
     End Sub
 
     Private Sub btnregistrarchk_Click(sender As Object, e As EventArgs) Handles btnregistrarchk.Click
+        If String.IsNullOrWhiteSpace(txtnumerochk.Text) OrElse
+           String.IsNullOrWhiteSpace(txtmontonum.Text) OrElse
+           String.IsNullOrWhiteSpace(txtmontoltr.Text) OrElse
+           String.IsNullOrWhiteSpace(txtdetallechk.Text) OrElse
+           cboproveedor.SelectedValue Is Nothing OrElse
+           cbogasto.SelectedValue Is Nothing Then
+            MessageBox.Show("Por favor complete todos los campos antes de registrar.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
         Try
             Using conn As MySqlConnection = ObtenerConexion()
                 conn.Open()

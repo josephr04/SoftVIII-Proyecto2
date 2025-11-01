@@ -22,8 +22,8 @@ Partial Class btnregistrar
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         lblcheck = New Label()
         PoisonDateTimeCheque = New ReaLTaiizor.Controls.PoisonDateTime()
         Label1 = New Label()
@@ -159,19 +159,19 @@ Partial Class btnregistrar
         ' 
         ' DataGridViewChk
         ' 
-        DataGridViewCellStyle3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle3.ForeColor = Color.Black
-        DataGridViewChk.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.ForeColor = Color.Black
+        DataGridViewChk.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         DataGridViewChk.BackgroundColor = Color.Teal
         DataGridViewChk.CellBorderStyle = DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = SystemColors.Control
-        DataGridViewCellStyle4.Font = New Font("Segoe UI", 11F)
-        DataGridViewCellStyle4.ForeColor = Color.Black
-        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
-        DataGridViewChk.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = SystemColors.Control
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 11F)
+        DataGridViewCellStyle2.ForeColor = Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        DataGridViewChk.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         DataGridViewChk.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewChk.Columns.AddRange(New DataGridViewColumn() {numerochk, fechachk, proveedor, montonum, montoltr, detalle, objgasto, acciones})
         DataGridViewChk.GridColor = Color.FromArgb(CByte(195), CByte(157), CByte(230))
@@ -240,7 +240,7 @@ Partial Class btnregistrar
         ' 
         ' btncancelarchk
         ' 
-        btncancelarchk.BackColor = SystemColors.ButtonFace
+        btncancelarchk.BackColor = SystemColors.ScrollBar
         btncancelarchk.Cursor = Cursors.Hand
         btncancelarchk.FlatAppearance.BorderSize = 0
         btncancelarchk.FlatStyle = FlatStyle.Flat
@@ -387,7 +387,7 @@ Partial Class btnregistrar
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.White
+        BackColor = SystemColors.Control
         ClientSize = New Size(1183, 805)
         Controls.Add(Label6)
         Controls.Add(DataGridViewChk)

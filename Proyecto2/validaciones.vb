@@ -66,7 +66,6 @@ Module validaciones
     End Sub
 
     Public Function NumeroALetras(numero As Decimal) As String
-        If numero = 0 Then Return "cero"
 
         Dim parteEntera As Long = Math.Floor(numero)
         Dim parteDecimal As Integer = Math.Round((numero - parteEntera) * 100)
@@ -77,9 +76,9 @@ Module validaciones
             resultado = "un"
         End If
 
-        If parteEntera > 1 Then
+        If parteEntera = 0 Or parteEntera > 1 Then
             resultado &= " balboas"
-        Else
+        ElseIf parteEntera = 1 Then
             resultado &= " balboa"
         End If
 
