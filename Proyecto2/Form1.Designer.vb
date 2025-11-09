@@ -42,7 +42,7 @@ Partial Class Form1
         ' 
         ' FlowLayoutPanel1
         ' 
-        FlowLayoutPanel1.BackColor = Color.FromArgb(CByte(51), CByte(46), CByte(43))
+        FlowLayoutPanel1.BackColor = Color.FromArgb(CByte(41), CByte(128), CByte(185))
         FlowLayoutPanel1.Controls.Add(Panel4)
         FlowLayoutPanel1.Controls.Add(Panel5)
         FlowLayoutPanel1.Controls.Add(Panel1)
@@ -66,7 +66,7 @@ Partial Class Form1
         ' 
         ' Button4
         ' 
-        Button4.BackColor = Color.FromArgb(CByte(51), CByte(46), CByte(43))
+        Button4.BackColor = Color.FromArgb(CByte(52), CByte(152), CByte(219))
         Button4.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button4.ForeColor = Color.White
         Button4.Image = CType(resources.GetObject("Button4.Image"), Image)
@@ -92,12 +92,12 @@ Partial Class Form1
         ' 
         ' Button5
         ' 
-        Button5.BackColor = Color.FromArgb(CByte(51), CByte(46), CByte(43))
+        Button5.BackColor = Color.FromArgb(CByte(52), CByte(152), CByte(219))
         Button5.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button5.ForeColor = Color.White
         Button5.Image = CType(resources.GetObject("Button5.Image"), Image)
         Button5.ImageAlign = ContentAlignment.MiddleLeft
-        Button5.Location = New Point(-6, -12)
+        Button5.Location = New Point(-6, -4)
         Button5.Name = "Button5"
         Button5.Padding = New Padding(25, 0, 0, 0)
         Button5.Size = New Size(241, 80)
@@ -118,12 +118,12 @@ Partial Class Form1
         ' 
         ' Button1
         ' 
-        Button1.BackColor = Color.FromArgb(CByte(51), CByte(46), CByte(43))
+        Button1.BackColor = Color.FromArgb(CByte(52), CByte(152), CByte(219))
         Button1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
         Button1.Image = CType(resources.GetObject("Button1.Image"), Image)
         Button1.ImageAlign = ContentAlignment.MiddleLeft
-        Button1.Location = New Point(-14, -12)
+        Button1.Location = New Point(-14, -4)
         Button1.Name = "Button1"
         Button1.Padding = New Padding(25, 0, 0, 0)
         Button1.Size = New Size(249, 80)
@@ -144,17 +144,17 @@ Partial Class Form1
         ' 
         ' Button2
         ' 
-        Button2.BackColor = Color.FromArgb(CByte(51), CByte(46), CByte(43))
+        Button2.BackColor = Color.FromArgb(CByte(52), CByte(152), CByte(219))
         Button2.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.White
         Button2.Image = CType(resources.GetObject("Button2.Image"), Image)
         Button2.ImageAlign = ContentAlignment.MiddleLeft
-        Button2.Location = New Point(-14, -12)
+        Button2.Location = New Point(-14, -4)
         Button2.Name = "Button2"
         Button2.Padding = New Padding(25, 0, 0, 0)
         Button2.Size = New Size(249, 80)
         Button2.TabIndex = 1
-        Button2.Text = "                      Logout"
+        Button2.Text = "                      Salir del " & vbCrLf & "                      Sistema"
         Button2.TextAlign = ContentAlignment.MiddleLeft
         Button2.UseVisualStyleBackColor = False
         ' 

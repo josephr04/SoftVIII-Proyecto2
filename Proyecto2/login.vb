@@ -2,29 +2,48 @@
     Private showPassword As Boolean = False
 
     Private Sub pbcontraseña_Click(sender As Object, e As EventArgs) Handles pbcontraseña.Click
-
-        ' 1. Cambia el estado (de verdadero a falso, o viceversa)
         showPassword = Not showPassword
-
-        ' 2. Verifica el nuevo estado y aplica los cambios apropiados
         If showPassword Then
             ' Estado: MOSTRAR Contraseña (showPassword = True)
-
-            ' La contraseña ahora se muestra (carácter vacío)
             txtcontraseña.PasswordChar = ""
-
-            ' El botón ahora debe ofrecer la opción de OCULTAR (ícono "hide")
             pbcontraseña.Image = My.Resources.hide
         Else
             ' Estado: OCULTAR Contraseña (showPassword = False)
-
-            ' La contraseña ahora se oculta (carácter '*')
             txtcontraseña.PasswordChar = "*"
-
-            ' El botón ahora debe ofrecer la opción de MOSTRAR (ícono "show")
             pbcontraseña.Image = My.Resources.show
         End If
     End Sub
 
+    Private Sub btniniciarsesion_Click(sender As Object, e As EventArgs) Handles btniniciarsesion.Click
+        If String.IsNullOrWhiteSpace(txtusuario.Text) OrElse
+           String.IsNullOrWhiteSpace(txtcontraseña.Text) Then
+            MessageBox.Show("Por favor complete todos los campos
+        .", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
 
+        Dim usuario As String = txtusuario.Text.Trim()
+        Dim contraseña As String = txtcontraseña.Text
+
+        If usuario = "usuario" And contraseña = "123" Then
+
+            Dim formularioPrincipal As New Form1()
+            formularioPrincipal.Show()
+            Me.Hide()
+        Else
+            MessageBox.Show("Usuario o contraseña incorrectos", "Error de acceso",
+                          MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            txtcontraseña.Text = ""
+            txtusuario.Focus()
+        End If
+
+        Dim formularioPrincipal As New Form1()
+        formularioPrincipal.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnsalir_Click(sender As Object, e As EventArgs) Handles btnsalir.Click
+        Application.Exit()
+    End Sub
 End Class

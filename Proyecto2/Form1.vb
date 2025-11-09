@@ -44,6 +44,20 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ' Mostrar mensaje de confirmación
+        Dim resultado As DialogResult = MessageBox.Show("¿Está seguro que desea salir del sistema?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
+        ' Si el usuario presiona "Sí", mostrar la ventana de Login
+        If resultado = DialogResult.Yes Then
+            ' Crear una instancia del formulario de login
+            Dim loginForm As New login()
+
+            ' Mostrar el login
+            loginForm.Show()
+
+            ' Cerrar u ocultar el formulario actual
+            Me.Hide()
+        End If
     End Sub
+
 End Class

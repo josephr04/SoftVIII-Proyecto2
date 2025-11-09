@@ -18,18 +18,8 @@ Module validaciones
 
     Public Sub SoloNumerosTextBox(sender As Object, e As EventArgs)
         Dim tb As ReaLTaiizor.Controls.AloneTextBox = CType(sender, ReaLTaiizor.Controls.AloneTextBox)
-        Dim txt = tb.Text
-        Dim nuevoTexto = ""
 
-        For Each c As Char In txt
-            If Char.IsDigit(c) Then
-                nuevoTexto &= c
-            End If
-        Next
-
-        If nuevoTexto <> txt Then
-            tb.Text = nuevoTexto
-        End If
+        tb.Text = New String(tb.Text.Where(Function(c) Char.IsDigit(c)).Take(7).ToArray())
     End Sub
 
     Public Sub SoloDineroTextBox(sender As Object, e As EventArgs)

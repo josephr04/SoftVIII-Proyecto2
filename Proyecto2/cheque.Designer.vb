@@ -34,14 +34,6 @@ Partial Class btnregistrar
         cbogasto = New ReaLTaiizor.Controls.AloneComboBox()
         Label5 = New Label()
         DataGridViewChk = New DataGridView()
-        numerochk = New DataGridViewTextBoxColumn()
-        fechachk = New DataGridViewTextBoxColumn()
-        proveedor = New DataGridViewTextBoxColumn()
-        montonum = New DataGridViewTextBoxColumn()
-        montoltr = New DataGridViewTextBoxColumn()
-        detalle = New DataGridViewTextBoxColumn()
-        objgasto = New DataGridViewTextBoxColumn()
-        acciones = New DataGridViewTextBoxColumn()
         btncancelarchk = New Button()
         Label6 = New Label()
         Label7 = New Label()
@@ -52,6 +44,15 @@ Partial Class btnregistrar
         txtmontonum = New ReaLTaiizor.Controls.AloneTextBox()
         txtnumerochk = New ReaLTaiizor.Controls.AloneTextBox()
         txtdetallechk = New TextBox()
+        numerochk = New DataGridViewTextBoxColumn()
+        fechachk = New DataGridViewTextBoxColumn()
+        proveedor = New DataGridViewTextBoxColumn()
+        montonum = New DataGridViewTextBoxColumn()
+        montoltr = New DataGridViewTextBoxColumn()
+        detalle = New DataGridViewTextBoxColumn()
+        objgasto = New DataGridViewTextBoxColumn()
+        anulado = New DataGridViewTextBoxColumn()
+        fecha_anulacion = New DataGridViewTextBoxColumn()
         CType(DataGridViewChk, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         SuspendLayout()
@@ -173,70 +174,13 @@ Partial Class btnregistrar
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
         DataGridViewChk.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         DataGridViewChk.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewChk.Columns.AddRange(New DataGridViewColumn() {numerochk, fechachk, proveedor, montonum, montoltr, detalle, objgasto, acciones})
+        DataGridViewChk.Columns.AddRange(New DataGridViewColumn() {numerochk, fechachk, proveedor, montonum, montoltr, detalle, objgasto, anulado, fecha_anulacion})
         DataGridViewChk.GridColor = Color.FromArgb(CByte(195), CByte(157), CByte(230))
         DataGridViewChk.Location = New Point(41, 61)
         DataGridViewChk.Name = "DataGridViewChk"
         DataGridViewChk.RowHeadersWidth = 51
         DataGridViewChk.Size = New Size(1019, 245)
         DataGridViewChk.TabIndex = 17
-        ' 
-        ' numerochk
-        ' 
-        numerochk.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
-        numerochk.HeaderText = "Número de Cheque"
-        numerochk.MinimumWidth = 6
-        numerochk.Name = "numerochk"
-        numerochk.Width = 140
-        ' 
-        ' fechachk
-        ' 
-        fechachk.HeaderText = "Fecha de Cheque"
-        fechachk.MinimumWidth = 6
-        fechachk.Name = "fechachk"
-        fechachk.Width = 125
-        ' 
-        ' proveedor
-        ' 
-        proveedor.HeaderText = "Proveedor"
-        proveedor.MinimumWidth = 6
-        proveedor.Name = "proveedor"
-        proveedor.Width = 125
-        ' 
-        ' montonum
-        ' 
-        montonum.HeaderText = "Monto Numérico"
-        montonum.MinimumWidth = 6
-        montonum.Name = "montonum"
-        montonum.Width = 125
-        ' 
-        ' montoltr
-        ' 
-        montoltr.HeaderText = "Monto en Letras"
-        montoltr.MinimumWidth = 6
-        montoltr.Name = "montoltr"
-        montoltr.Width = 125
-        ' 
-        ' detalle
-        ' 
-        detalle.HeaderText = "Detalle"
-        detalle.MinimumWidth = 6
-        detalle.Name = "detalle"
-        detalle.Width = 125
-        ' 
-        ' objgasto
-        ' 
-        objgasto.HeaderText = "Objeto de Gasto"
-        objgasto.MinimumWidth = 6
-        objgasto.Name = "objgasto"
-        objgasto.Width = 125
-        ' 
-        ' acciones
-        ' 
-        acciones.HeaderText = "Acciones"
-        acciones.MinimumWidth = 6
-        acciones.Name = "acciones"
-        acciones.Width = 90
         ' 
         ' btncancelarchk
         ' 
@@ -383,6 +327,80 @@ Partial Class btnregistrar
         txtdetallechk.Size = New Size(523, 74)
         txtdetallechk.TabIndex = 27
         ' 
+        ' numerochk
+        ' 
+        numerochk.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+        numerochk.HeaderText = "Número de Cheque"
+        numerochk.MinimumWidth = 6
+        numerochk.Name = "numerochk"
+        numerochk.ReadOnly = True
+        numerochk.Width = 140
+        ' 
+        ' fechachk
+        ' 
+        fechachk.HeaderText = "Fecha de Cheque"
+        fechachk.MinimumWidth = 6
+        fechachk.Name = "fechachk"
+        fechachk.ReadOnly = True
+        fechachk.Width = 125
+        ' 
+        ' proveedor
+        ' 
+        proveedor.HeaderText = "Proveedor"
+        proveedor.MinimumWidth = 6
+        proveedor.Name = "proveedor"
+        proveedor.ReadOnly = True
+        proveedor.Width = 125
+        ' 
+        ' montonum
+        ' 
+        montonum.HeaderText = "Monto Numérico"
+        montonum.MinimumWidth = 6
+        montonum.Name = "montonum"
+        montonum.ReadOnly = True
+        montonum.Width = 125
+        ' 
+        ' montoltr
+        ' 
+        montoltr.HeaderText = "Monto en Letras"
+        montoltr.MinimumWidth = 6
+        montoltr.Name = "montoltr"
+        montoltr.ReadOnly = True
+        montoltr.Width = 125
+        ' 
+        ' detalle
+        ' 
+        detalle.HeaderText = "Detalle"
+        detalle.MinimumWidth = 6
+        detalle.Name = "detalle"
+        detalle.ReadOnly = True
+        detalle.Width = 125
+        ' 
+        ' objgasto
+        ' 
+        objgasto.HeaderText = "Objeto de Gasto"
+        objgasto.MinimumWidth = 6
+        objgasto.Name = "objgasto"
+        objgasto.ReadOnly = True
+        objgasto.Width = 125
+        ' 
+        ' anulado
+        ' 
+        anulado.HeaderText = "Estado"
+        anulado.MinimumWidth = 6
+        anulado.Name = "anulado"
+        anulado.ReadOnly = True
+        anulado.Resizable = DataGridViewTriState.True
+        anulado.Width = 125
+        ' 
+        ' fecha_anulacion
+        ' 
+        fecha_anulacion.HeaderText = "Fecha de Anulación"
+        fecha_anulacion.MinimumWidth = 6
+        fecha_anulacion.Name = "fecha_anulacion"
+        fecha_anulacion.ReadOnly = True
+        fecha_anulacion.Width = 125
+        ' 
         ' btnregistrar
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -418,6 +436,12 @@ Partial Class btnregistrar
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents txtnumerochk As ReaLTaiizor.Controls.AloneTextBox
+    Friend WithEvents txtmontonum As ReaLTaiizor.Controls.AloneTextBox
+    Friend WithEvents txtmontoltr As ReaLTaiizor.Controls.AloneTextBox
+    Friend WithEvents btnregistrarchk As Button
+    Friend WithEvents txtdetallechk As TextBox
     Friend WithEvents numerochk As DataGridViewTextBoxColumn
     Friend WithEvents fechachk As DataGridViewTextBoxColumn
     Friend WithEvents proveedor As DataGridViewTextBoxColumn
@@ -425,13 +449,8 @@ Partial Class btnregistrar
     Friend WithEvents montoltr As DataGridViewTextBoxColumn
     Friend WithEvents detalle As DataGridViewTextBoxColumn
     Friend WithEvents objgasto As DataGridViewTextBoxColumn
-    Friend WithEvents acciones As DataGridViewTextBoxColumn
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents txtnumerochk As ReaLTaiizor.Controls.AloneTextBox
-    Friend WithEvents txtmontonum As ReaLTaiizor.Controls.AloneTextBox
-    Friend WithEvents txtmontoltr As ReaLTaiizor.Controls.AloneTextBox
-    Friend WithEvents btnregistrarchk As Button
-    Friend WithEvents txtdetallechk As TextBox
+    Friend WithEvents anulado As DataGridViewTextBoxColumn
+    Friend WithEvents fecha_anulacion As DataGridViewTextBoxColumn
 End Class
 
 
