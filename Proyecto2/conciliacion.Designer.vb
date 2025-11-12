@@ -31,39 +31,40 @@ Partial Class conciliacion
         Label7 = New Label()
         Label8 = New Label()
         lblSaldoConciliado = New Label()
-        saldoLibroInicial = New TextBox()
-        TextBox2 = New TextBox()
+        txtSaldoLibro = New TextBox()
+        txtDepositos = New TextBox()
         lblSaldoLibro = New Label()
         lblPeriodo = New Label()
-        TextBox3 = New TextBox()
-        TextBox4 = New TextBox()
-        TextBox5 = New TextBox()
-        TextBox6 = New TextBox()
-        TextBox7 = New TextBox()
-        TextBox8 = New TextBox()
+        txtChequesAnulados = New TextBox()
+        txtDepositos2 = New TextBox()
+        txtSubtotal = New TextBox()
+        txtChequesGirados = New TextBox()
+        txtChequesGirados2 = New TextBox()
+        txtSaldoConciliadoLibro = New TextBox()
         lblSaldoBanco = New Label()
         Label13 = New Label()
         Label14 = New Label()
         Label15 = New Label()
         Label16 = New Label()
         lblConciliadoBanco = New Label()
-        saldoBancoInicial = New TextBox()
-        TextBox10 = New TextBox()
-        TextBox11 = New TextBox()
-        TextBox12 = New TextBox()
-        TextBox13 = New TextBox()
+        txtSaldoBanco = New TextBox()
+        txtDepositosTransito = New TextBox()
+        txtChequesCirculacion = New TextBox()
+        txtChequesCirculacion2 = New TextBox()
+        txtSaldoConciliadoBanco = New TextBox()
         cboMes = New ComboBox()
         Label18 = New Label()
         Label19 = New Label()
         cboAnio = New ComboBox()
         btnCalcular = New Button()
+        btnLimpiarConciliacion = New Button()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        Label1.Location = New Point(583, 33)
+        Label1.Location = New Point(563, 33)
         Label1.Name = "Label1"
         Label1.Size = New Size(146, 28)
         Label1.TabIndex = 0
@@ -73,7 +74,7 @@ Partial Class conciliacion
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        Label2.Location = New Point(524, 61)
+        Label2.Location = New Point(504, 61)
         Label2.Name = "Label2"
         Label2.Size = New Size(260, 28)
         Label2.TabIndex = 1
@@ -83,7 +84,7 @@ Partial Class conciliacion
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 10F)
-        Label3.Location = New Point(320, 176)
+        Label3.Location = New Point(300, 176)
         Label3.Name = "Label3"
         Label3.Size = New Size(45, 23)
         Label3.TabIndex = 2
@@ -93,7 +94,7 @@ Partial Class conciliacion
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 10F)
-        Label4.Location = New Point(370, 176)
+        Label4.Location = New Point(350, 176)
         Label4.Name = "Label4"
         Label4.Size = New Size(78, 23)
         Label4.TabIndex = 3
@@ -103,7 +104,7 @@ Partial Class conciliacion
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 10F)
-        Label5.Location = New Point(370, 209)
+        Label5.Location = New Point(350, 209)
         Label5.Name = "Label5"
         Label5.Size = New Size(152, 23)
         Label5.TabIndex = 4
@@ -113,7 +114,7 @@ Partial Class conciliacion
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI", 9F)
-        Label6.Location = New Point(292, 284)
+        Label6.Location = New Point(272, 284)
         Label6.Name = "Label6"
         Label6.Size = New Size(76, 20)
         Label6.TabIndex = 5
@@ -123,7 +124,7 @@ Partial Class conciliacion
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Segoe UI", 10F)
-        Label7.Location = New Point(299, 309)
+        Label7.Location = New Point(279, 309)
         Label7.Name = "Label7"
         Label7.Size = New Size(65, 23)
         Label7.TabIndex = 6
@@ -133,7 +134,7 @@ Partial Class conciliacion
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Segoe UI", 10F)
-        Label8.Location = New Point(370, 310)
+        Label8.Location = New Point(350, 310)
         Label8.Name = "Label8"
         Label8.Size = New Size(139, 23)
         Label8.TabIndex = 7
@@ -143,31 +144,32 @@ Partial Class conciliacion
         ' 
         lblSaldoConciliado.AutoSize = True
         lblSaldoConciliado.Font = New Font("Segoe UI", 12.5F, FontStyle.Bold)
-        lblSaldoConciliado.Location = New Point(283, 383)
+        lblSaldoConciliado.Location = New Point(263, 383)
         lblSaldoConciliado.Name = "lblSaldoConciliado"
         lblSaldoConciliado.Size = New Size(405, 30)
         lblSaldoConciliado.TabIndex = 8
         lblSaldoConciliado.Text = "SALDO CONCILIADO SEGÚN LIBROS AL"
         ' 
-        ' saldoLibroInicial
+        ' txtSaldoLibro
         ' 
-        saldoLibroInicial.Location = New Point(920, 140)
-        saldoLibroInicial.Name = "saldoLibroInicial"
-        saldoLibroInicial.Size = New Size(125, 27)
-        saldoLibroInicial.TabIndex = 9
+        txtSaldoLibro.Location = New Point(900, 140)
+        txtSaldoLibro.Name = "txtSaldoLibro"
+        txtSaldoLibro.Size = New Size(125, 27)
+        txtSaldoLibro.TabIndex = 9
         ' 
-        ' TextBox2
+        ' txtDepositos
         ' 
-        TextBox2.Location = New Point(789, 175)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(125, 27)
-        TextBox2.TabIndex = 10
+        txtDepositos.Location = New Point(769, 175)
+        txtDepositos.Name = "txtDepositos"
+        txtDepositos.ReadOnly = True
+        txtDepositos.Size = New Size(125, 27)
+        txtDepositos.TabIndex = 10
         ' 
         ' lblSaldoLibro
         ' 
         lblSaldoLibro.AutoSize = True
         lblSaldoLibro.Font = New Font("Segoe UI", 12.2F, FontStyle.Bold)
-        lblSaldoLibro.Location = New Point(283, 137)
+        lblSaldoLibro.Location = New Point(263, 137)
         lblSaldoLibro.Name = "lblSaldoLibro"
         lblSaldoLibro.Size = New Size(257, 30)
         lblSaldoLibro.TabIndex = 11
@@ -177,59 +179,66 @@ Partial Class conciliacion
         ' 
         lblPeriodo.AutoSize = True
         lblPeriodo.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblPeriodo.Location = New Point(431, 89)
+        lblPeriodo.Location = New Point(411, 89)
         lblPeriodo.Name = "lblPeriodo"
         lblPeriodo.Size = New Size(264, 28)
         lblPeriodo.TabIndex = 12
         lblPeriodo.Text = "Correspondiente al mes de"
         ' 
-        ' TextBox3
+        ' txtChequesAnulados
         ' 
-        TextBox3.Location = New Point(789, 208)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(125, 27)
-        TextBox3.TabIndex = 14
+        txtChequesAnulados.Location = New Point(769, 208)
+        txtChequesAnulados.Name = "txtChequesAnulados"
+        txtChequesAnulados.ReadOnly = True
+        txtChequesAnulados.Size = New Size(125, 27)
+        txtChequesAnulados.TabIndex = 14
         ' 
-        ' TextBox4
+        ' txtDepositos2
         ' 
-        TextBox4.Location = New Point(920, 247)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(125, 27)
-        TextBox4.TabIndex = 15
+        txtDepositos2.Location = New Point(900, 247)
+        txtDepositos2.Name = "txtDepositos2"
+        txtDepositos2.ReadOnly = True
+        txtDepositos2.Size = New Size(125, 27)
+        txtDepositos2.TabIndex = 15
         ' 
-        ' TextBox5
+        ' txtSubtotal
         ' 
-        TextBox5.Location = New Point(920, 283)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(125, 27)
-        TextBox5.TabIndex = 16
+        txtSubtotal.Location = New Point(900, 283)
+        txtSubtotal.Name = "txtSubtotal"
+        txtSubtotal.ReadOnly = True
+        txtSubtotal.Size = New Size(125, 27)
+        txtSubtotal.TabIndex = 16
         ' 
-        ' TextBox6
+        ' txtChequesGirados
         ' 
-        TextBox6.Location = New Point(789, 316)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(125, 27)
-        TextBox6.TabIndex = 17
+        txtChequesGirados.Location = New Point(769, 316)
+        txtChequesGirados.Name = "txtChequesGirados"
+        txtChequesGirados.ReadOnly = True
+        txtChequesGirados.Size = New Size(125, 27)
+        txtChequesGirados.TabIndex = 17
         ' 
-        ' TextBox7
+        ' txtChequesGirados2
         ' 
-        TextBox7.Location = New Point(920, 349)
-        TextBox7.Name = "TextBox7"
-        TextBox7.Size = New Size(125, 27)
-        TextBox7.TabIndex = 18
+        txtChequesGirados2.Location = New Point(900, 349)
+        txtChequesGirados2.Name = "txtChequesGirados2"
+        txtChequesGirados2.ReadOnly = True
+        txtChequesGirados2.Size = New Size(125, 27)
+        txtChequesGirados2.TabIndex = 18
         ' 
-        ' TextBox8
+        ' txtSaldoConciliadoLibro
         ' 
-        TextBox8.Location = New Point(920, 382)
-        TextBox8.Name = "TextBox8"
-        TextBox8.Size = New Size(125, 27)
-        TextBox8.TabIndex = 19
+        txtSaldoConciliadoLibro.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        txtSaldoConciliadoLibro.Location = New Point(900, 382)
+        txtSaldoConciliadoLibro.Name = "txtSaldoConciliadoLibro"
+        txtSaldoConciliadoLibro.ReadOnly = True
+        txtSaldoConciliadoLibro.Size = New Size(125, 27)
+        txtSaldoConciliadoLibro.TabIndex = 19
         ' 
         ' lblSaldoBanco
         ' 
         lblSaldoBanco.AutoSize = True
         lblSaldoBanco.Font = New Font("Segoe UI", 12.5F, FontStyle.Bold)
-        lblSaldoBanco.Location = New Point(283, 434)
+        lblSaldoBanco.Location = New Point(263, 434)
         lblSaldoBanco.Name = "lblSaldoBanco"
         lblSaldoBanco.Size = New Size(228, 30)
         lblSaldoBanco.TabIndex = 20
@@ -239,7 +248,7 @@ Partial Class conciliacion
         ' 
         Label13.AutoSize = True
         Label13.Font = New Font("Segoe UI", 10F)
-        Label13.Location = New Point(318, 476)
+        Label13.Location = New Point(298, 476)
         Label13.Name = "Label13"
         Label13.Size = New Size(50, 23)
         Label13.TabIndex = 21
@@ -249,7 +258,7 @@ Partial Class conciliacion
         ' 
         Label14.AutoSize = True
         Label14.Font = New Font("Segoe UI", 10F)
-        Label14.Location = New Point(363, 476)
+        Label14.Location = New Point(343, 476)
         Label14.Name = "Label14"
         Label14.Size = New Size(179, 23)
         Label14.TabIndex = 22
@@ -259,7 +268,7 @@ Partial Class conciliacion
         ' 
         Label15.AutoSize = True
         Label15.Font = New Font("Segoe UI", 10F)
-        Label15.Location = New Point(297, 506)
+        Label15.Location = New Point(277, 506)
         Label15.Name = "Label15"
         Label15.Size = New Size(65, 23)
         Label15.TabIndex = 23
@@ -269,7 +278,7 @@ Partial Class conciliacion
         ' 
         Label16.AutoSize = True
         Label16.Font = New Font("Segoe UI", 10F)
-        Label16.Location = New Point(368, 506)
+        Label16.Location = New Point(348, 506)
         Label16.Name = "Label16"
         Label16.Size = New Size(189, 23)
         Label16.TabIndex = 24
@@ -279,52 +288,57 @@ Partial Class conciliacion
         ' 
         lblConciliadoBanco.AutoSize = True
         lblConciliadoBanco.Font = New Font("Segoe UI", 12.5F, FontStyle.Bold)
-        lblConciliadoBanco.Location = New Point(283, 576)
+        lblConciliadoBanco.Location = New Point(263, 576)
         lblConciliadoBanco.Name = "lblConciliadoBanco"
         lblConciliadoBanco.Size = New Size(388, 30)
         lblConciliadoBanco.TabIndex = 25
         lblConciliadoBanco.Text = "SALDO CONCILIADO IGUAL A BANCO"
         ' 
-        ' saldoBancoInicial
+        ' txtSaldoBanco
         ' 
-        saldoBancoInicial.Location = New Point(920, 433)
-        saldoBancoInicial.Name = "saldoBancoInicial"
-        saldoBancoInicial.Size = New Size(125, 27)
-        saldoBancoInicial.TabIndex = 26
+        txtSaldoBanco.Location = New Point(900, 433)
+        txtSaldoBanco.Name = "txtSaldoBanco"
+        txtSaldoBanco.Size = New Size(125, 27)
+        txtSaldoBanco.TabIndex = 26
         ' 
-        ' TextBox10
+        ' txtDepositosTransito
         ' 
-        TextBox10.Location = New Point(789, 471)
-        TextBox10.Name = "TextBox10"
-        TextBox10.Size = New Size(125, 27)
-        TextBox10.TabIndex = 27
+        txtDepositosTransito.Location = New Point(769, 471)
+        txtDepositosTransito.Name = "txtDepositosTransito"
+        txtDepositosTransito.ReadOnly = True
+        txtDepositosTransito.Size = New Size(125, 27)
+        txtDepositosTransito.TabIndex = 27
         ' 
-        ' TextBox11
+        ' txtChequesCirculacion
         ' 
-        TextBox11.Location = New Point(789, 503)
-        TextBox11.Name = "TextBox11"
-        TextBox11.Size = New Size(125, 27)
-        TextBox11.TabIndex = 28
+        txtChequesCirculacion.Location = New Point(769, 503)
+        txtChequesCirculacion.Name = "txtChequesCirculacion"
+        txtChequesCirculacion.ReadOnly = True
+        txtChequesCirculacion.Size = New Size(125, 27)
+        txtChequesCirculacion.TabIndex = 28
         ' 
-        ' TextBox12
+        ' txtChequesCirculacion2
         ' 
-        TextBox12.Location = New Point(920, 545)
-        TextBox12.Name = "TextBox12"
-        TextBox12.Size = New Size(125, 27)
-        TextBox12.TabIndex = 29
+        txtChequesCirculacion2.Location = New Point(900, 545)
+        txtChequesCirculacion2.Name = "txtChequesCirculacion2"
+        txtChequesCirculacion2.ReadOnly = True
+        txtChequesCirculacion2.Size = New Size(125, 27)
+        txtChequesCirculacion2.TabIndex = 29
         ' 
-        ' TextBox13
+        ' txtSaldoConciliadoBanco
         ' 
-        TextBox13.Location = New Point(920, 578)
-        TextBox13.Name = "TextBox13"
-        TextBox13.Size = New Size(125, 27)
-        TextBox13.TabIndex = 30
+        txtSaldoConciliadoBanco.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        txtSaldoConciliadoBanco.Location = New Point(900, 578)
+        txtSaldoConciliadoBanco.Name = "txtSaldoConciliadoBanco"
+        txtSaldoConciliadoBanco.ReadOnly = True
+        txtSaldoConciliadoBanco.Size = New Size(125, 27)
+        txtSaldoConciliadoBanco.TabIndex = 30
         ' 
         ' cboMes
         ' 
         cboMes.DropDownStyle = ComboBoxStyle.DropDownList
         cboMes.FormattingEnabled = True
-        cboMes.Location = New Point(97, 105)
+        cboMes.Location = New Point(67, 105)
         cboMes.Name = "cboMes"
         cboMes.Size = New Size(151, 28)
         cboMes.TabIndex = 31
@@ -333,7 +347,7 @@ Partial Class conciliacion
         ' 
         Label18.AutoSize = True
         Label18.Font = New Font("Segoe UI", 10F)
-        Label18.Location = New Point(97, 79)
+        Label18.Location = New Point(67, 79)
         Label18.Name = "Label18"
         Label18.Size = New Size(109, 23)
         Label18.TabIndex = 32
@@ -343,7 +357,7 @@ Partial Class conciliacion
         ' 
         Label19.AutoSize = True
         Label19.Font = New Font("Segoe UI", 10F)
-        Label19.Location = New Point(97, 151)
+        Label19.Location = New Point(67, 151)
         Label19.Name = "Label19"
         Label19.Size = New Size(107, 23)
         Label19.TabIndex = 34
@@ -353,7 +367,7 @@ Partial Class conciliacion
         ' 
         cboAnio.DropDownStyle = ComboBoxStyle.DropDownList
         cboAnio.FormattingEnabled = True
-        cboAnio.Location = New Point(97, 177)
+        cboAnio.Location = New Point(67, 177)
         cboAnio.Name = "cboAnio"
         cboAnio.Size = New Size(151, 28)
         cboAnio.TabIndex = 33
@@ -366,44 +380,60 @@ Partial Class conciliacion
         btnCalcular.FlatStyle = FlatStyle.Flat
         btnCalcular.Font = New Font("Segoe UI", 12F)
         btnCalcular.ForeColor = Color.White
-        btnCalcular.Location = New Point(97, 226)
+        btnCalcular.Location = New Point(67, 226)
         btnCalcular.Name = "btnCalcular"
         btnCalcular.Size = New Size(104, 39)
         btnCalcular.TabIndex = 39
         btnCalcular.Text = "Calcular"
         btnCalcular.UseVisualStyleBackColor = False
         ' 
+        ' btnLimpiarConciliacion
+        ' 
+        btnLimpiarConciliacion.BackColor = SystemColors.ScrollBar
+        btnLimpiarConciliacion.Cursor = Cursors.Hand
+        btnLimpiarConciliacion.FlatAppearance.BorderSize = 0
+        btnLimpiarConciliacion.FlatStyle = FlatStyle.Flat
+        btnLimpiarConciliacion.Font = New Font("Segoe UI", 12F)
+        btnLimpiarConciliacion.ForeColor = SystemColors.ControlText
+        btnLimpiarConciliacion.Location = New Point(67, 274)
+        btnLimpiarConciliacion.Name = "btnLimpiarConciliacion"
+        btnLimpiarConciliacion.Size = New Size(104, 39)
+        btnLimpiarConciliacion.TabIndex = 40
+        btnLimpiarConciliacion.Text = "Limpiar"
+        btnLimpiarConciliacion.UseVisualStyleBackColor = False
+        ' 
         ' conciliacion
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1160, 636)
+        Controls.Add(btnLimpiarConciliacion)
         Controls.Add(btnCalcular)
         Controls.Add(Label19)
         Controls.Add(cboAnio)
         Controls.Add(Label18)
         Controls.Add(cboMes)
-        Controls.Add(TextBox13)
-        Controls.Add(TextBox12)
-        Controls.Add(TextBox11)
-        Controls.Add(TextBox10)
-        Controls.Add(saldoBancoInicial)
+        Controls.Add(txtSaldoConciliadoBanco)
+        Controls.Add(txtChequesCirculacion2)
+        Controls.Add(txtChequesCirculacion)
+        Controls.Add(txtDepositosTransito)
+        Controls.Add(txtSaldoBanco)
         Controls.Add(lblConciliadoBanco)
         Controls.Add(Label16)
         Controls.Add(Label15)
         Controls.Add(Label14)
         Controls.Add(Label13)
         Controls.Add(lblSaldoBanco)
-        Controls.Add(TextBox8)
-        Controls.Add(TextBox7)
-        Controls.Add(TextBox6)
-        Controls.Add(TextBox5)
-        Controls.Add(TextBox4)
-        Controls.Add(TextBox3)
+        Controls.Add(txtSaldoConciliadoLibro)
+        Controls.Add(txtChequesGirados2)
+        Controls.Add(txtChequesGirados)
+        Controls.Add(txtSubtotal)
+        Controls.Add(txtDepositos2)
+        Controls.Add(txtChequesAnulados)
         Controls.Add(lblPeriodo)
         Controls.Add(lblSaldoLibro)
-        Controls.Add(TextBox2)
-        Controls.Add(saldoLibroInicial)
+        Controls.Add(txtDepositos)
+        Controls.Add(txtSaldoLibro)
         Controls.Add(lblSaldoConciliado)
         Controls.Add(Label8)
         Controls.Add(Label7)
@@ -429,30 +459,31 @@ Partial Class conciliacion
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents lblSaldoConciliado As Label
-    Friend WithEvents saldoLibroInicial As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtSaldoLibro As TextBox
+    Friend WithEvents txtDepositos As TextBox
     Friend WithEvents lblSaldoLibro As Label
     Friend WithEvents lblPeriodo As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents txtChequesAnulados As TextBox
+    Friend WithEvents txtDepositos2 As TextBox
+    Friend WithEvents txtSubtotal As TextBox
+    Friend WithEvents txtChequesGirados As TextBox
+    Friend WithEvents txtChequesGirados2 As TextBox
+    Friend WithEvents txtSaldoConciliadoLibro As TextBox
     Friend WithEvents lblSaldoBanco As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents lblConciliadoBanco As Label
-    Friend WithEvents saldoBancoInicial As TextBox
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents txtSaldoBanco As TextBox
+    Friend WithEvents txtDepositosTransito As TextBox
+    Friend WithEvents txtChequesCirculacion As TextBox
+    Friend WithEvents txtChequesCirculacion2 As TextBox
+    Friend WithEvents txtSaldoConciliadoBanco As TextBox
     Friend WithEvents cboMes As ComboBox
     Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents cboAnio As ComboBox
     Friend WithEvents btnCalcular As Button
+    Friend WithEvents btnLimpiarConciliacion As Button
 End Class

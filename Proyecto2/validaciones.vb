@@ -55,6 +55,47 @@ Module validaciones
         End If
     End Sub
 
+    Public Sub SoloDineroTextBox_Normal(sender As Object, e As EventArgs)
+        Dim tb As TextBox = CType(sender, TextBox)
+        Dim txt As String = tb.Text
+        Dim nuevoTexto As String = ""
+        Dim tienePunto As Boolean = False
+        Dim posicionPunto As Integer = -1
+
+        For i As Integer = 0 To txt.Length - 1
+            Dim c As Char = txt(i)
+
+            ' Permitir solo números y un punto decimal
+            If Char.IsDigit(c) Then
+                ' Si ya hay un punto, verificar que no se excedan 2 decimales
+                If tienePunto Then
+                    If (i - posicionPunto) <= 2 Then
+                        nuevoTexto &= c
+                    End If
+                Else
+                    nuevoTexto &= c
+                End If
+
+            ElseIf c = "."c AndAlso Not tienePunto Then
+                ' Solo permitir un punto
+                tienePunto = True
+                posicionPunto = nuevoTexto.Length
+                nuevoTexto &= c
+            End If
+        Next
+
+        ' Evitar bucle infinito si se modifica el texto dentro del evento
+        If nuevoTexto <> txt Then
+            Dim pos As Integer = tb.SelectionStart
+            tb.Text = nuevoTexto
+            If pos > 0 AndAlso pos <= tb.Text.Length Then
+                tb.SelectionStart = pos
+            Else
+                tb.SelectionStart = tb.Text.Length
+            End If
+        End If
+    End Sub
+
     Public Function NumeroALetras(numero As Decimal) As String
 
         Dim parteEntera As Long = Math.Floor(numero)
