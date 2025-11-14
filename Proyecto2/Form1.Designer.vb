@@ -33,11 +33,17 @@ Partial Class Form1
         Panel2 = New Panel()
         Button2 = New Button()
         ParrotWidgetPanel1 = New ReaLTaiizor.Controls.ParrotWidgetPanel()
+        Panel3 = New Panel()
+        Label2 = New Label()
+        Label1 = New Label()
+        PictureBox1 = New PictureBox()
         FlowLayoutPanel1.SuspendLayout()
         Panel4.SuspendLayout()
         Panel5.SuspendLayout()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
+        ParrotWidgetPanel1.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' FlowLayoutPanel1
@@ -71,7 +77,7 @@ Partial Class Form1
         Button4.ForeColor = Color.White
         Button4.Image = CType(resources.GetObject("Button4.Image"), Image)
         Button4.ImageAlign = ContentAlignment.MiddleLeft
-        Button4.Location = New Point(-14, -12)
+        Button4.Location = New Point(-14, -10)
         Button4.Name = "Button4"
         Button4.Padding = New Padding(25, 0, 0, 0)
         Button4.Size = New Size(249, 80)
@@ -97,7 +103,7 @@ Partial Class Form1
         Button5.ForeColor = Color.White
         Button5.Image = CType(resources.GetObject("Button5.Image"), Image)
         Button5.ImageAlign = ContentAlignment.MiddleLeft
-        Button5.Location = New Point(-6, -4)
+        Button5.Location = New Point(-6, -10)
         Button5.Name = "Button5"
         Button5.Padding = New Padding(25, 0, 0, 0)
         Button5.Size = New Size(241, 80)
@@ -123,7 +129,7 @@ Partial Class Form1
         Button1.ForeColor = Color.White
         Button1.Image = CType(resources.GetObject("Button1.Image"), Image)
         Button1.ImageAlign = ContentAlignment.MiddleLeft
-        Button1.Location = New Point(-14, -4)
+        Button1.Location = New Point(-14, -11)
         Button1.Name = "Button1"
         Button1.Padding = New Padding(25, 0, 0, 0)
         Button1.Size = New Size(249, 80)
@@ -145,11 +151,11 @@ Partial Class Form1
         ' Button2
         ' 
         Button2.BackColor = Color.FromArgb(CByte(52), CByte(152), CByte(219))
-        Button2.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button2.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Button2.ForeColor = Color.White
         Button2.Image = CType(resources.GetObject("Button2.Image"), Image)
         Button2.ImageAlign = ContentAlignment.MiddleLeft
-        Button2.Location = New Point(-14, -4)
+        Button2.Location = New Point(-14, -10)
         Button2.Name = "Button2"
         Button2.Padding = New Padding(25, 0, 0, 0)
         Button2.Size = New Size(249, 80)
@@ -160,11 +166,56 @@ Partial Class Form1
         ' 
         ' ParrotWidgetPanel1
         ' 
+        ParrotWidgetPanel1.BackColor = Color.FromArgb(CByte(245), CByte(246), CByte(251))
+        ParrotWidgetPanel1.Controls.Add(Panel3)
+        ParrotWidgetPanel1.Controls.Add(Label2)
+        ParrotWidgetPanel1.Controls.Add(Label1)
+        ParrotWidgetPanel1.Controls.Add(PictureBox1)
         ParrotWidgetPanel1.ControlsAsWidgets = False
         ParrotWidgetPanel1.Location = New Point(234, 0)
         ParrotWidgetPanel1.Name = "ParrotWidgetPanel1"
         ParrotWidgetPanel1.Size = New Size(1096, 784)
         ParrotWidgetPanel1.TabIndex = 1
+        ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.FromArgb(CByte(41), CByte(128), CByte(185))
+        Panel3.Location = New Point(503, 447)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(110, 10)
+        Panel3.TabIndex = 3
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Segoe UI", 10F)
+        Label2.Location = New Point(427, 480)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(263, 46)
+        Label2.TabIndex = 2
+        Label2.Text = "Seleccione una opción del menú " & vbCrLf & "lateral para comenzar a trabajar."
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 18F, FontStyle.Bold)
+        Label1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Label1.Location = New Point(317, 392)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(478, 41)
+        Label1.TabIndex = 1
+        Label1.Text = "Sistema de Conciliación Bancaria"
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.BackColor = Color.FromArgb(CByte(245), CByte(246), CByte(251))
+        PictureBox1.Image = My.Resources.Resources.banco_logo
+        PictureBox1.Location = New Point(406, 77)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(300, 297)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox1.TabIndex = 0
+        PictureBox1.TabStop = False
         ' 
         ' Form1
         ' 
@@ -180,6 +231,9 @@ Partial Class Form1
         Panel5.ResumeLayout(False)
         Panel1.ResumeLayout(False)
         Panel2.ResumeLayout(False)
+        ParrotWidgetPanel1.ResumeLayout(False)
+        ParrotWidgetPanel1.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -193,5 +247,9 @@ Partial Class Form1
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Button2 As Button
     Friend WithEvents ParrotWidgetPanel1 As ReaLTaiizor.Controls.ParrotWidgetPanel
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Panel3 As Panel
 
 End Class
